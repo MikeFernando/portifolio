@@ -33,12 +33,24 @@ export const BgVideo = styled.div`
       rgba(10, 12, 16, 0.4) 50%,
       #fff 100%
     );
+
+    @media (max-width: 515px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 515px) {
+    display: none;
   }
 `;
 
 export const Video = styled.video`
   position: absolute;
   height: 100vh;
+
+  @media (max-width: 515px) {
+    display: none;
+  }
 `;
 
 export const Container = styled.section`
@@ -88,7 +100,7 @@ export const Container = styled.section`
 
   @media (max-width: 515px) {
     padding: 0;
-    margin: -100px auto;
+    margin: 0 auto;
   }
 `;
 
@@ -194,6 +206,11 @@ export const TextContainer = styled.section`
     h1 {
       font-size: 2rem;
       display: block;
+      color: ${({ theme }) => theme['gray-900']};
+    }
+
+    p {
+      color: ${({ theme }) => theme['gray-200']};
     }
 
     h1::before {
