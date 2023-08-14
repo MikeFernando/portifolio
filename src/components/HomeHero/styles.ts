@@ -88,7 +88,7 @@ export const Container = styled.section`
 
   @media (max-width: 515px) {
     padding: 0;
-    margin: 0;
+    margin: -100px auto;
   }
 `;
 
