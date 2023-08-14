@@ -57,6 +57,7 @@ export const Subtitulo = styled.h2`
 
   @media (max-width: 400px) {
     font-size: 2rem;
+    margin-top: -100px;
     padding-top: 0;
   }
 `;
