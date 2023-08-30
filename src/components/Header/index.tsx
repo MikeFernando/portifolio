@@ -11,7 +11,6 @@ export function Header() {
         </strong>
         <ul>
           <NavLink title="Home" path="/" />
-          {/* <NavLink title="Experiências" path="#experiencias" /> */}
           <NavLink title="Projetos" path="/projects" includes />
         </ul>
       </div>

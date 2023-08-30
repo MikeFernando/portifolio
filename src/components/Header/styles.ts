@@ -21,6 +21,7 @@ export const Container = styled.header`
       padding: 2px 3px;
       background-color: #000;
       color: #fff;
+      border: 0;
     }
 
     span {

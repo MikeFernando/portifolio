@@ -13,12 +13,7 @@ export const Container = styled.section`
 
     // ============================== RESPONSIVE
     @media (max-width: 1200px) {
-      padding-top: 200px;
-    }
-
-    @media (max-width: 1200px) {
       grid-template-columns: 1fr;
-      padding-top: 200px;
     }
 
     @media (max-width: 768px) {

@@ -18,6 +18,7 @@ export const BgVideo = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #1a1a1a;
 
   ::after {
     content: '';
@@ -30,7 +31,7 @@ export const BgVideo = styled.div`
     background: linear-gradient(
       90deg,
       #000 8%,
-      rgba(10, 12, 16, 0.4) 50%,
+      rgba(10, 2, 30, 0.5) 50%,
       #fff 100%
     );
 
@@ -39,8 +40,16 @@ export const BgVideo = styled.div`
     }
   }
 
-  @media (max-width: 515px) {
-    display: none;
+  @media (max-width: 1400px) {
+    ::after {
+      background: rgba(10, 2, 30, 0.5);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    ::after {
+      background: rgba(10, 2, 30, 0.5);
+    }
   }
 `;
 
@@ -55,9 +64,8 @@ export const Video = styled.video`
 
 export const Container = styled.section`
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  height: calc(100vh - 84px);
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 129px 0;
@@ -90,59 +98,46 @@ export const Container = styled.section`
     }
   }
 
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 75px;
-  }
-
   @media (max-width: 515px) {
     padding: 0;
     margin: 0 auto;
+
+    background: linear-gradient(
+      180deg,
+      #000 8%,
+      rgba(10, 2, 30, 0.5) 50%,
+      #fff 100%
+    );
   }
 `;
 
 export const TextContainer = styled.section`
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 
   h1 {
-    font-size: 4rem;
+    font-size: 6rem;
+    font-family: 'Special Elite', cursive;
     color: ${({ theme }) => theme.white};
     padding: 0 30px 0 30px;
     position: relative;
   }
-  h1::before {
-    content: '{';
-    display: block;
-    font-size: 5rem;
-    color: ${({ theme }) => theme['green-200']};
-    position: absolute;
-    top: -16px;
-    left: -11px;
-    z-index: 2;
-  }
-
   h1 span {
+    font-family: 'Rye', cursive;
     display: inline-block;
     position: relative;
-  }
-
-  h1 span::after {
-    content: '}';
-    display: inline-block;
-    font-size: 5rem;
-    color: ${({ theme }) => theme['green-200']};
-    position: absolute;
-    top: -10px;
+    color: #75275e;
   }
 
   p {
-    font-size: 1.875rem;
+    font-size: 2rem;
     margin: 32px;
-    color: ${({ theme }) => theme['green-200']};
+    font-family: 'Rye', cursive;
+    color: #bb639e;
   }
 
   // ============================== RESPONSIVE
@@ -156,31 +151,6 @@ export const TextContainer = styled.section`
     }
   }
 
-  @media (max-width: 1000px) {
-    h1 {
-      font-size: 3rem;
-    }
-
-    h1::before {
-      content: '{';
-      display: block;
-      font-size: 4rem;
-      color: #ccf235;
-      position: absolute;
-      top: -16px;
-      left: 0px;
-      z-index: 2;
-    }
-    h1 span::after {
-      font-size: 4rem;
-      top: -9px;
-    }
-
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
   @media (max-width: 768px) {
     text-align: center;
 
@@ -188,37 +158,9 @@ export const TextContainer = styled.section`
       font-size: 3rem;
       display: inline;
     }
-
-    h1::before {
-      content: '{';
-      display: block;
-      font-size: 4rem;
-      color: #ccf235;
-      z-index: 2;
-      top: -16px;
-      /* left: 142px; */
-    }
   }
 
   @media (max-width: 515px) {
     text-align: center;
-
-    h1 {
-      font-size: 2rem;
-      display: block;
-      color: ${({ theme }) => theme['gray-900']};
-    }
-
-    p {
-      color: ${({ theme }) => theme['gray-200']};
-    }
-
-    h1::before {
-      display: none;
-    }
-
-    h1 span::after {
-      display: none;
-    }
   }
 `;
